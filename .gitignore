@@ -2,3 +2,4 @@ emails.csv
 secret.key
 public.key
 tokenized_emails.json
+indexed_encrypted_emails.json
