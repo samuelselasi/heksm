@@ -39,13 +39,13 @@ Use the following commands to compile the scripts:
 
 ```
 # Compile encryption
-g++ -std=c++17 optimized_encryption.cpp libseal.a -Iseal -I/usr/include/nlohmann -o optimized_encryption
+g++ -std=c++17 new_encryption.cpp libseal.a -Iseal -I/usr/include/nlohmann -o new_encryption
 ```
 
 # Compile search
 
 ```
-g++ -std=c++17 optimized_search.cpp libseal.a -Iseal -I/usr/include/nlohmann -o optimized_search
+g++ -std=c++17 new_search.cpp libseal.a -Iseal -I/usr/include/nlohmann -o new_search
 ```
 
 ## Phase 1: Homomorphic Encryption of Emails
@@ -59,7 +59,7 @@ g++ -std=c++17 optimized_search.cpp libseal.a -Iseal -I/usr/include/nlohmann -o 
 ## How to run:
 
 ```
-./optimized_encryption
+./new_encryption
 ```
 
 You will see output like:
@@ -81,7 +81,7 @@ Processed 6 emails.
 ## How to run:
 
 ```
-./optimized_search
+./new_search
 ```
 
 Example prompt/output:
@@ -91,9 +91,8 @@ Enter keyword to search: shoot
 Match in file: allen-p/_sent_mail/1001.
 Message: Let's shoot for Tuesday at 11:45.,Re: Hello Let's shoot for Tuesday at 11:45.
 
-
 Done. Total matches: 1
-Search Time: 12.934 seconds
+Search time: 7533 ms
 ```
 
 ## Performance Measurement
