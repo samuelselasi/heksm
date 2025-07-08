@@ -111,7 +111,7 @@ int main(int argc, char* argv[]) {
     string output_path = "../../datasets/encrypted/indexed_encrypted_emails.json";
     string pubkey_path = "./build/public.key";
     string seckey_path = "./build/secret.key";
-    size_t email_limit = 5;
+    size_t email_limit = 60;
 
     if (argc > 1) csv_path = argv[1];
     if (argc > 2) output_path = argv[2];
