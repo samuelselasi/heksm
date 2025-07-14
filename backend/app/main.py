@@ -10,10 +10,19 @@ from app.routers.search import main as search
 from app.routers.user.models import User
 from app.routers.search.models import SearchLog
 from app.database import Base, engine
+from fastapi.middleware.cors import CORSMiddleware
 
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(debug=True)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # In production, use your actual frontend URL
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 app.include_router(auth.router, tags=["Authentication"])
 app.include_router(user.router, tags=["Users"])
