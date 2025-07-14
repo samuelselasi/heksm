@@ -20,3 +20,4 @@ yarn-error.log*
 *.local
 .cache/
 .vite/
+frontend/tailwindcss
