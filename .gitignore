@@ -6,3 +6,4 @@ indexed_encrypted_emails.json
 .env
 database.py
 datasets/encrypted/indexed_encrypted_emails.json
+__pycache__
