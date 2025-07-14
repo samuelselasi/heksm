@@ -2,7 +2,7 @@
 """Module that defines tables"""
 
 from app import utils
-from .database import Base
+from app.database import Base
 from datetime import datetime
 from sqlalchemy import Boolean, Column, Integer, String, DateTime
 

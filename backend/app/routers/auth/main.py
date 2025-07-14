@@ -4,10 +4,10 @@
 from sqlalchemy.orm import Session
 from . import crud, models, schemas
 from app.oauth2 import oauth2_scheme
-from .database import SessionLocal, engine
+from app.database import SessionLocal, engine
 from fastapi import Depends, BackgroundTasks, APIRouter
 
-models.Base.metadata.create_all(bind=engine)
+# models.Base.metadata.create_all(bind=engine)
 
 router = APIRouter()
 

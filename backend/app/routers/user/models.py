@@ -2,7 +2,7 @@
 """Module that defines tables"""
 
 import secrets
-from .database import Base
+from app.database import Base
 from datetime import datetime
 from sqlalchemy.orm import relationship
 from passlib.hash import pbkdf2_sha256 as sha256

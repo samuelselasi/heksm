@@ -8,7 +8,7 @@ from sqlalchemy import text
 from . import models, schemas
 from app.config import settings
 from fastapi import HTTPException
-from .database import SessionLocal
+from app.database import SessionLocal
 from sqlalchemy.orm import Session
 from app.schedulers import scheduler
 from ..user.crud import read_user_by_id

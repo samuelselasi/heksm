@@ -26,6 +26,9 @@ class Settings(BaseSettings):
     POSTGRES_PASSWORD: str
     POSTGRES_DB: str
     POSTGRES_DOMAIN: str
+    ENCRYPTED_INDEX_PATH: str
+    SEARCH_BINARY_PATH: str
+    SEARCH_EXECUTABLE_PATH: str
 
     class Config:
         title = 'Base Settings'

@@ -6,7 +6,7 @@ import jwt
 import sqlalchemy
 from app import utils
 from sqlalchemy import text
-from .database import get_db
+from app.database import get_db
 from . import models, schemas
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
