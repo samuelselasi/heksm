@@ -1,41 +1,135 @@
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
+
 export default function LogsTable({ logs }) {
+  const containerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const rowVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.3,
+        ease: "easeOut",
+      },
+    },
+  };
+
   if (!logs?.length) {
     return (
-      <div className="bg-white rounded-2xl shadow-md p-6 w-full max-w-3xl text-gray-600 text-center border border-blue-100">
-        <span className="italic text-blue-600 font-semibold">No search logs found.</span>
-      </div>
+      <motion.div
+        className="card-enhanced w-full max-w-3xl text-gray-600 text-center"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <div className="flex flex-col items-center gap-4 py-8">
+          <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+            <svg
+              className="w-8 h-8 text-blue-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+              />
+            </svg>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold text-blue-700 mb-2">
+              No Search Logs Found
+            </h3>
+            <p className="text-gray-500">
+              Start searching to see your audit trail here.
+            </p>
+          </div>
+        </div>
+      </motion.div>
     );
   }
 
   return (
-    <div className="overflow-x-auto w-full max-w-3xl bg-white rounded-2xl shadow-2xl p-4 mt-2 border border-blue-100">
-      <h2 className="text-xl font-bold text-blue-700 mb-2">Search Audit Logs</h2>
-      <table className="min-w-full table-auto">
-        <thead>
-          <tr className="bg-gradient-to-r from-blue-100 to-blue-50 text-blue-800 uppercase text-xs tracking-wider">
-            <th className="px-3 py-2 text-left rounded-tl-xl">User ID</th>
-            <th className="px-3 py-2 text-left">Keyword</th>
-            <th className="px-3 py-2 text-left">Matches</th>
-            <th className="px-3 py-2 text-left">Decrypted</th>
-            <th className="px-3 py-2 text-left rounded-tr-xl">Time</th>
-          </tr>
-        </thead>
-        <tbody>
-          {logs.map((log, idx) => (
-            <tr key={log.id} className={idx % 2 === 0 ? "bg-blue-50" : "bg-white"}>
-              <td className="px-3 py-2 font-mono">{log.user_id}</td>
-              <td className="px-3 py-2">{log.keyword}</td>
-              <td className="px-3 py-2">{log.match_count}</td>
-              <td className="px-3 py-2">
-                <span className={log.decrypted ? "text-green-600 font-bold" : "text-gray-400"}>
-                  {log.decrypted ? "Yes" : "No"}
-                </span>
-              </td>
-              <td className="px-3 py-2">{new Date(log.timestamp).toLocaleString()}</td>
+    <motion.div
+      className="card-enhanced w-full max-w-3xl"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <div className="flex items-center gap-3 mb-6">
+        <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+        <h2 className="text-xl font-bold text-blue-700">Search Audit Logs</h2>
+      </div>
+
+      <div className="overflow-x-auto">
+        <table className="min-w-full">
+          <thead>
+            <tr className="bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-800 uppercase text-xs tracking-wider font-semibold">
+              <th className="px-4 py-3 text-left rounded-tl-xl">User ID</th>
+              <th className="px-4 py-3 text-left">Keyword</th>
+              <th className="px-4 py-3 text-left">Matches</th>
+              <th className="px-4 py-3 text-left">Decrypted</th>
+              <th className="px-4 py-3 text-left rounded-tr-xl">Time</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+          </thead>
+          <tbody>
+            {logs.map((log, idx) => (
+              <motion.tr
+                key={log.id}
+                className={`${
+                  idx % 2 === 0 ? "bg-gray-50" : "bg-white"
+                } hover:bg-blue-50 transition-colors duration-200`}
+                variants={rowVariants}
+                whileHover={{
+                  scale: 1.01,
+                  transition: { duration: 0.2 },
+                }}
+              >
+                <td className="px-4 py-3 font-mono text-sm text-gray-700">
+                  {log.user_id}
+                </td>
+                <td className="px-4 py-3 font-medium text-gray-800">
+                  {log.keyword}
+                </td>
+                <td className="px-4 py-3">
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                    {log.match_count}
+                  </span>
+                </td>
+                <td className="px-4 py-3">
+                  <span
+                    className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                      log.decrypted
+                        ? "bg-green-100 text-green-800"
+                        : "bg-gray-100 text-gray-600"
+                    }`}
+                  >
+                    {log.decrypted ? "Yes" : "No"}
+                  </span>
+                </td>
+                <td className="px-4 py-3 text-sm text-gray-600">
+                  {new Date(log.timestamp).toLocaleString()}
+                </td>
+              </motion.tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </motion.div>
   );
 }

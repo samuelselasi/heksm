@@ -4,7 +4,7 @@ import UserBar from "./components/UserBar";
 import SearchForm from "./components/SearchForm";
 import SearchResults from "./components/SearchResults";
 import LogsTable from "./components/LogsTable";
-import { Card } from "./components/ui/card";
+import Card from "./components/ui/card";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "./components/ui/tabs";
 import { Alert, AlertTitle, AlertDescription } from "./components/ui/alert";
 
@@ -104,7 +104,7 @@ export default function App() {
       });
       const data = await response.json();
       setLogs(data);
-    } catch (err) {
+    } catch {
       setLogs([]);
     }
     setLoading(false);
@@ -123,41 +123,46 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 via-white to-blue-200">
-      <Card className="w-full max-w-3xl mx-auto shadow-2xl p-8">
-        <div className="mb-6">
-          <h1 className="text-2xl md:text-3xl font-extrabold text-blue-700 text-center tracking-tight">
-            Homomorphic Encryption-based Keyword Search Mechanism
-          </h1>
-        </div>
-        <Tabs value={view} onValueChange={setView} className="w-full">
-          <TabsList className="flex justify-center mb-4">
-            <TabsTrigger value="search">Search</TabsTrigger>
-            <TabsTrigger value="logs">Logs</TabsTrigger>
-          </TabsList>
-          <TabsContent value="search">
-            <UserBar email={userEmail} onLogout={handleLogout} />
-            <Alert className="mb-5">
-              <AlertTitle>Welcome, {userEmail}!</AlertTitle>
-              <AlertDescription>
-                Search for keywords in encrypted data. Only users with permission can decrypt results.
-              </AlertDescription>
-            </Alert>
-            <SearchForm onSearch={handleSearch} loading={loading} />
-            <SearchResults result={result} />
-          </TabsContent>
-          <TabsContent value="logs">
-            <UserBar email={userEmail} onLogout={handleLogout} />
-            <Alert className="mb-5">
-              <AlertTitle>Search Audit Logs</AlertTitle>
-              <AlertDescription>
-                View all keyword searches performed in the system for full traceability.
-              </AlertDescription>
-            </Alert>
-            <LogsTable logs={logs} />
-          </TabsContent>
-        </Tabs>
-      </Card>
+    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-white to-blue-200 px-2 py-4">
+      <div className="w-4/5 mx-auto">
+        <Card className="shadow-2xl p-8">
+          <div className="mb-8 text-center">
+            <h1 className="text-3xl md:text-4xl font-extrabold text-blue-700 tracking-tight mb-2">
+              Homomorphic Encryption-based
+            </h1>
+            <h2 className="text-xl md:text-2xl font-bold text-blue-600">
+              Keyword Search Mechanism
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 mx-auto mt-4 rounded-full"></div>
+          </div>
+
+          <Tabs value={view} onValueChange={setView} className="w-full">
+            <TabsList className="mb-8">
+              <TabsTrigger value="search">Search</TabsTrigger>
+              <TabsTrigger value="logs">Logs</TabsTrigger>
+            </TabsList>
+
+            <TabsContent value="search" className="space-y-8">
+              <UserBar email={userEmail} onLogout={handleLogout} />
+              <h3 className="text-xl font-semibold text-blue-800 mb-8">
+                Welcome, {userEmail}! Search for keywords in encrypted data.
+                Only users with permission can decrypt results.
+              </h3>
+              <SearchForm onSearch={handleSearch} loading={loading} />
+              <SearchResults result={result} />
+            </TabsContent>
+
+            <TabsContent value="logs" className="space-y-8">
+              <UserBar email={userEmail} onLogout={handleLogout} />
+              <h3 className="text-xl font-semibold text-blue-800 mb-8">
+                Search Audit Logs. View all keyword searches performed in the
+                system for full traceability.
+              </h3>
+              <LogsTable logs={logs} />
+            </TabsContent>
+          </Tabs>
+        </Card>
+      </div>
     </div>
   );
 }
