@@ -244,6 +244,11 @@ body {
   backdrop-filter: blur(10px);
 }
 
+.card-enhanced,
+.card-enhanced * {
+  color: #000 !important;
+}
+
 /* Responsive text utilities */
 .text-responsive {
   font-size: 0.875rem;

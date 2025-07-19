@@ -30,7 +30,7 @@ export default function LogsTable({ logs }) {
   if (!logs?.length) {
     return (
       <motion.div
-        className="card-enhanced w-full max-w-3xl text-gray-600 text-center"
+        className="card-enhanced w-full max-w-3xl text-black text-center"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -55,7 +55,7 @@ export default function LogsTable({ logs }) {
             <h3 className="text-lg font-semibold text-blue-700 mb-2">
               No Search Logs Found
             </h3>
-            <p className="text-gray-500">
+            <p className="text-gray-900">
               Start searching to see your audit trail here.
             </p>
           </div>
@@ -66,7 +66,7 @@ export default function LogsTable({ logs }) {
 
   return (
     <motion.div
-      className="card-enhanced w-full max-w-3xl"
+      className="card-enhanced w-full max-w-3xl text-black"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -100,10 +100,10 @@ export default function LogsTable({ logs }) {
                   transition: { duration: 0.2 },
                 }}
               >
-                <td className="px-4 py-3 font-mono text-sm text-gray-700">
+                <td className="px-4 py-3 font-mono text-sm text-black">
                   {log.user_id}
                 </td>
-                <td className="px-4 py-3 font-medium text-gray-800">
+                <td className="px-4 py-3 font-medium text-black">
                   {log.keyword}
                 </td>
                 <td className="px-4 py-3">
@@ -116,13 +116,13 @@ export default function LogsTable({ logs }) {
                     className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
                       log.decrypted
                         ? "bg-green-100 text-green-800"
-                        : "bg-gray-100 text-gray-600"
+                        : "bg-gray-100 text-gray-900"
                     }`}
                   >
                     {log.decrypted ? "Yes" : "No"}
                   </span>
                 </td>
-                <td className="px-4 py-3 text-sm text-gray-600">
+                <td className="px-4 py-3 text-sm text-black">
                   {new Date(log.timestamp).toLocaleString()}
                 </td>
               </motion.tr>

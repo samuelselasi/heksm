@@ -18,7 +18,7 @@ export default function SearchResults({ result }) {
 
   return (
     <motion.div
-      className="card-enhanced w-full max-w-2xl text-gray-800"
+      className="card-enhanced w-full max-w-2xl text-black"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -32,7 +32,7 @@ export default function SearchResults({ result }) {
         <h3 className="text-xl font-bold text-blue-700">Search Results</h3>
       </div>
       <div className="bg-gray-50 rounded-xl p-4 border border-gray-200">
-        <pre className="whitespace-pre-line break-words text-base leading-relaxed text-gray-700 font-mono text-sm">
+        <pre className="whitespace-pre-line break-words text-base leading-relaxed text-black font-mono text-sm">
           {result}
         </pre>
       </div>

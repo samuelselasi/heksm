@@ -48,10 +48,6 @@ export default function UserBar({ email, onLogout }) {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      whileHover={{
-        boxShadow: "0 20px 40px rgba(0, 0, 0, 0.3)",
-        transition: { duration: 0.3 },
-      }}
     >
       <div className="flex items-center gap-4">
         <motion.div
