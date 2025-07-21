@@ -57,21 +57,22 @@ python3 precision_and_recall.py
 ## Output
 
 ```
+python3 precision_and_recall.py 
+
 Precision and Recall Table:
  keyword  true_positives  false_positives  false_negatives  precision  recall  plaintext_matches  encrypted_matches
- meeting              12                0                3      100.0   80.00                 15                 12
-     gas              17                0                5      100.0   77.27                 22                 17
- project              11                0                5      100.0   68.75                 16                 11
-    plan              16                0                8      100.0   66.67                 24                 16
-position               5                0                4      100.0   55.56                  9                  5
-   check               4                0                4      100.0   50.00                  8                  4
-   phone              11                0                2      100.0   84.62                 13                 11
-    list               9                0               10      100.0   47.37                 19                  9
-    deal              11                0                8      100.0   57.89                 19                 11
-   shoot               1                0                0      100.0  100.00                  1                  1
+ meeting              12                0                0      100.0   100.0                 12                 12
+     gas              17                0                0      100.0   100.0                 17                 17
+ project              11                0                0      100.0   100.0                 11                 11
+    plan              16                0                0      100.0   100.0                 16                 16
+position               5                0                0      100.0   100.0                  5                  5
+   check               4                0                0      100.0   100.0                  4                  4
+   phone              11                0                0      100.0   100.0                 11                 11
+    list               9                0                0      100.0   100.0                  9                  9
+    deal              11                0                0      100.0   100.0                 11                 11
+   shoot               1                0                0      100.0   100.0                  1                  1
 
 Plot saved as: precision_recall_plot.png
-
 ```
 <img width="1200" height="600" alt="precision_recall_plot" src="https://github.com/user-attachments/assets/f5aa0637-c5ae-4d22-bdff-168e15c6b60c" />
 
