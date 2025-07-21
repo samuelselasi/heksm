@@ -1,8 +1,8 @@
 {
   "meeting": {
     "keyword": "meeting",
-    "matches": 15,
-    "time_sec": 0.5153,
+    "matches": 12,
+    "time_sec": 0.5402,
     "file_ids": [
       "allen-p/_sent_mail/10.",
       "allen-p/_sent_mail/105.",
@@ -15,16 +15,13 @@
       "allen-p/_sent_mail/122.",
       "allen-p/_sent_mail/125.",
       "allen-p/_sent_mail/126.",
-      "allen-p/_sent_mail/13.",
-      "allen-p/_sent_mail/150.",
-      "allen-p/_sent_mail/151.",
-      "allen-p/_sent_mail/170."
+      "allen-p/_sent_mail/13."
     ]
   },
   "gas": {
     "keyword": "gas",
-    "matches": 22,
-    "time_sec": 0.4885,
+    "matches": 17,
+    "time_sec": 0.4956,
     "file_ids": [
       "allen-p/_sent_mail/102.",
       "allen-p/_sent_mail/103.",
@@ -42,18 +39,13 @@
       "allen-p/_sent_mail/13.",
       "allen-p/_sent_mail/131.",
       "allen-p/_sent_mail/140.",
-      "allen-p/_sent_mail/146.",
-      "allen-p/_sent_mail/157.",
-      "allen-p/_sent_mail/169.",
-      "allen-p/_sent_mail/18.",
-      "allen-p/_sent_mail/180.",
-      "allen-p/_sent_mail/184."
+      "allen-p/_sent_mail/146."
     ]
   },
   "project": {
     "keyword": "project",
-    "matches": 16,
-    "time_sec": 0.485,
+    "matches": 11,
+    "time_sec": 0.4977,
     "file_ids": [
       "allen-p/_sent_mail/105.",
       "allen-p/_sent_mail/106.",
@@ -65,21 +57,15 @@
       "allen-p/_sent_mail/140.",
       "allen-p/_sent_mail/144.",
       "allen-p/_sent_mail/145.",
-      "allen-p/_sent_mail/146.",
-      "allen-p/_sent_mail/149.",
-      "allen-p/_sent_mail/151.",
-      "allen-p/_sent_mail/154.",
-      "allen-p/_sent_mail/159.",
-      "allen-p/_sent_mail/176."
+      "allen-p/_sent_mail/146."
     ]
   },
   "plan": {
     "keyword": "plan",
-    "matches": 24,
-    "time_sec": 0.4853,
+    "matches": 16,
+    "time_sec": 0.5037,
     "file_ids": [
       "allen-p/_sent_mail/10.",
-      "allen-p/_sent_mail/102.",
       "allen-p/_sent_mail/105.",
       "allen-p/_sent_mail/106.",
       "allen-p/_sent_mail/108.",
@@ -92,53 +78,38 @@
       "allen-p/_sent_mail/136.",
       "allen-p/_sent_mail/14.",
       "allen-p/_sent_mail/140.",
-      "allen-p/_sent_mail/141.",
       "allen-p/_sent_mail/145.",
       "allen-p/_sent_mail/146.",
-      "allen-p/_sent_mail/148.",
-      "allen-p/_sent_mail/149.",
-      "allen-p/_sent_mail/15.",
-      "allen-p/_sent_mail/151.",
-      "allen-p/_sent_mail/16.",
-      "allen-p/_sent_mail/170.",
-      "allen-p/_sent_mail/176."
+      "allen-p/_sent_mail/148."
     ]
   },
   "position": {
     "keyword": "position",
-    "matches": 9,
-    "time_sec": 0.4884,
+    "matches": 5,
+    "time_sec": 0.5065,
     "file_ids": [
       "allen-p/_sent_mail/105.",
       "allen-p/_sent_mail/106.",
-      "allen-p/_sent_mail/119.",
       "allen-p/_sent_mail/122.",
-      "allen-p/_sent_mail/125.",
-      "allen-p/_sent_mail/126.",
       "allen-p/_sent_mail/129.",
-      "allen-p/_sent_mail/142.",
       "allen-p/_sent_mail/144."
     ]
   },
   "check": {
     "keyword": "check",
-    "matches": 8,
-    "time_sec": 0.4898,
+    "matches": 4,
+    "time_sec": 0.4979,
     "file_ids": [
       "allen-p/_sent_mail/112.",
       "allen-p/_sent_mail/114.",
-      "allen-p/_sent_mail/130.",
       "allen-p/_sent_mail/136.",
-      "allen-p/_sent_mail/137.",
-      "allen-p/_sent_mail/15.",
-      "allen-p/_sent_mail/177.",
-      "allen-p/_sent_mail/184."
+      "allen-p/_sent_mail/137."
     ]
   },
   "phone": {
     "keyword": "phone",
-    "matches": 13,
-    "time_sec": 0.4844,
+    "matches": 11,
+    "time_sec": 0.5001,
     "file_ids": [
       "allen-p/_sent_mail/1004.",
       "allen-p/_sent_mail/102.",
@@ -150,67 +121,47 @@
       "allen-p/_sent_mail/131.",
       "allen-p/_sent_mail/132.",
       "allen-p/_sent_mail/140.",
-      "allen-p/_sent_mail/146.",
-      "allen-p/_sent_mail/154.",
-      "allen-p/_sent_mail/159."
+      "allen-p/_sent_mail/146."
     ]
   },
   "list": {
     "keyword": "list",
-    "matches": 19,
-    "time_sec": 0.4838,
+    "matches": 9,
+    "time_sec": 0.4893,
     "file_ids": [
       "allen-p/_sent_mail/1003.",
       "allen-p/_sent_mail/105.",
       "allen-p/_sent_mail/106.",
       "allen-p/_sent_mail/115.",
       "allen-p/_sent_mail/116.",
-      "allen-p/_sent_mail/117.",
-      "allen-p/_sent_mail/118.",
       "allen-p/_sent_mail/130.",
       "allen-p/_sent_mail/138.",
       "allen-p/_sent_mail/14.",
-      "allen-p/_sent_mail/143.",
-      "allen-p/_sent_mail/15.",
-      "allen-p/_sent_mail/151.",
-      "allen-p/_sent_mail/154.",
-      "allen-p/_sent_mail/159.",
-      "allen-p/_sent_mail/16.",
-      "allen-p/_sent_mail/165.",
-      "allen-p/_sent_mail/169.",
-      "allen-p/_sent_mail/181."
+      "allen-p/_sent_mail/143."
     ]
   },
   "deal": {
     "keyword": "deal",
-    "matches": 19,
-    "time_sec": 0.4869,
+    "matches": 11,
+    "time_sec": 0.5105,
     "file_ids": [
       "allen-p/_sent_mail/102.",
       "allen-p/_sent_mail/105.",
       "allen-p/_sent_mail/106.",
       "allen-p/_sent_mail/114.",
-      "allen-p/_sent_mail/117.",
-      "allen-p/_sent_mail/118.",
       "allen-p/_sent_mail/123.",
       "allen-p/_sent_mail/129.",
-      "allen-p/_sent_mail/130.",
       "allen-p/_sent_mail/131.",
-      "allen-p/_sent_mail/132.",
       "allen-p/_sent_mail/140.",
       "allen-p/_sent_mail/141.",
       "allen-p/_sent_mail/144.",
-      "allen-p/_sent_mail/146.",
-      "allen-p/_sent_mail/151.",
-      "allen-p/_sent_mail/154.",
-      "allen-p/_sent_mail/159.",
-      "allen-p/_sent_mail/165."
+      "allen-p/_sent_mail/146."
     ]
   },
   "shoot": {
     "keyword": "shoot",
     "matches": 1,
-    "time_sec": 0.4874,
+    "time_sec": 0.5279,
     "file_ids": [
       "allen-p/_sent_mail/1001."
     ]
