@@ -74,7 +74,8 @@ position               5                0                0      100.0   100.0   
 
 Plot saved as: precision_recall_plot.png
 ```
-<img width="1200" height="600" alt="precision_recall_plot" src="https://github.com/user-attachments/assets/f5aa0637-c5ae-4d22-bdff-168e15c6b60c" />
+<img width="1200" height="600" alt="precision_recall_plot" src="https://github.com/user-attachments/assets/5a7b07f3-8953-40e7-9dc9-d9cda18fff9f" />
+
 
 
 ---
