@@ -1,6 +1,7 @@
 import pandas as pd
 import sys
 import time
+import re
 
 # -----------------------------
 # Step 1: Handle CLI argument
@@ -16,15 +17,21 @@ print(f"Searching for keyword: '{search_term}'\n")
 # -----------------------------
 # Step 2: Load dataset
 # -----------------------------
-df = pd.read_csv("../../datasets/cleaned/split-1.csv")
+df = pd.read_csv("../../datasets/cleaned/split-1.csv", nrows=60)
 
 # -----------------------------
-# Step 3: Vectorized Search
+# Step 3: Token-based exact search
 # -----------------------------
 start_time = time.time()
 
+# Combine subject and body only (message column does not exist)
 df["combined"] = (df["subject"].fillna("") + " " + df["body"].fillna("")).str.lower()
-results = df[df["combined"].str.contains(search_term, na=False)]
+
+# Tokenize using regex
+df["tokens"] = df["combined"].apply(lambda text: re.findall(r'\b\w+\b', text))
+
+# Filter for exact matches
+results = df[df["tokens"].apply(lambda words: search_term in words)]
 
 elapsed_time = time.time() - start_time
 
