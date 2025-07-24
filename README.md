@@ -1,5 +1,8 @@
 # MSc Project: Securing Third-Party Data In Forensic Investigations Using Homomorphic Encryption
 
+<img width="1920" height="1080" alt="interface" src="https://github.com/user-attachments/assets/7d273b62-b9d4-457f-a142-b4c515f3b153" />
+
+
 **Author:** Samuel Selasi
 
 **University:** University of Ghana
