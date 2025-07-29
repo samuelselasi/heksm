@@ -1,12 +1,69 @@
-# React + Vite
+# HEKSM Frontend Interface
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend interface for the **Homomorphic Encryption-based Keyword Search Mechanism (HEKSM)** project. 
+It provides a simple UI for performing keyword searches, visualizing results, and viewing audit logs.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
 
-## Expanding the ESLint configuration
+Before you begin, ensure you have **Node.js (>= 16)** and **npm** installed.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Clone the main repository and navigate to the frontend directory:
+
+```
+git clone https://github.com/samuelselasi/heksm.git
+cd heksm/frontend
+```
+
+Install the project dependencies:
+
+```
+npm install
+```
+
+---
+
+## Running the Development Server
+
+Start the local dev server:
+
+```
+npm run dev
+```
+
+---
+
+## Project Structure
+
+```
+frontend/
+├── public/              # Static files
+├── src/                 # Source code (components, pages, services)
+│   ├── components/      # UI components
+│   ├── pages/           # Main views or routes
+│   └── App.jsx          # Root component
+├── package.json
+├── vite.config.js       # Or similar if using Vite
+└── README.md            # This file
+
+```
+
+---
+
+## API Integration
+
+The frontend communicates with the backend keyword search service via REST endpoints. 
+Make sure the backend server is running and update any base URLs if needed in:
+
+```
+src/services/api.js
+```
+
+---
+
+## Troubleshooting
+
+* Port conflict? Change the port in `.env` or `vite.config.js`
+* Backend down? Ensure your `C++`/`Python` services are running locally before querying.
+
